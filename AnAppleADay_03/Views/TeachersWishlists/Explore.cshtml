@@ -1,0 +1,53 @@
+﻿@model IEnumerable<AnAppleADay_03.TeachersWishlist>
+
+
+
+    <section class="head-section-explore">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center py-5">
+                    <h1 class="display-4 mt-3">Explore</h1>
+                    <p class="lead">
+                        There are many teachers, possibly in your own community that need our help.
+                        Come explore the various profiles of our teachers. Each with unique class rooms and unique challenges.
+                        Simply pick a profile and choose from a list of much needed materials. Its so easy!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+<!-- Explore Profiles -->
+
+<section class="section-features">
+    <div class="row">
+        
+        @foreach (var item in Model)
+        {
+            <div class="col-1-of-4 m-3">
+                <div class="feature-box">
+                    <h3 class="heading-tertiary">
+                        <a href="@Url.Action("Details", new {id = item.listId})">
+                            <h4>@item.itemName</h4>
+                        </a>
+                    </h3>
+                    <p >
+                        <p class="feature-box__text">
+                            @item.itemAbout
+                        </p>
+                        <p class="feature-box__text">
+                            @item.current / @item.cost
+                        </p>
+                        <p class="feature-box__text">
+                            <small>Expires: @item.expDate.ToShortDateString()</small>
+                        </p>
+                    </p>
+                </div>
+            </div>
+        }
+    </div>
+</section>
+
+

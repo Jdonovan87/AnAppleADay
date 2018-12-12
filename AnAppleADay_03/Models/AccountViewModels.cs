@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Drawing;
 
 namespace AnAppleADay_03.Models
 {
@@ -63,7 +65,7 @@ namespace AnAppleADay_03.Models
     }
 
     public class RegisterViewModel
-    {
+    { 
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]
@@ -79,6 +81,17 @@ namespace AnAppleADay_03.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        public string firstName { get; set; }
+        public string lastName { get; set; }
+        public string city { get; set; }
+        public string state { get; set; }
+        public int zip { get; set; }
+        [DataType(DataType.Date)]
+        public System.DateTime dob { get; set; }
+        public Gender gender { get; set; }
+
+
     }
 
     public class ResetPasswordViewModel

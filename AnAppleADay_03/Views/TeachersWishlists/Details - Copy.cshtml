@@ -1,0 +1,87 @@
+﻿@using System.Data.Entity.Core.Objects
+@model AnAppleADay_03.TeachersWishlist
+@*@model AnAppleADay_03.Models.ViewModels.WishlistDonations*@
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="container bg-info">
+
+    <h2 class="text-center">Details</h2>
+
+    <div class="col-4 border">
+        <h4>Teachers Wishlist</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.itemName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.itemName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.itemAbout)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.itemAbout)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.cost)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.cost)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.current)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.current)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.expDate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.expDate)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Teacher.firstName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Teacher.firstName)
+            </dd>
+
+        </dl>
+        
+        <div>
+            <p>
+                @Html.ActionLink("Edit", "Edit", new { id = Model.listId }) |
+                @Html.ActionLink("Back to List", "Index")
+            </p>
+        </div>
+    </div>
+    
+    <div class="col-4 border">
+        <text>Donation</text>
+        <p>
+            @Html.Editor("donation")
+        </p>
+        
+        <div>
+            <input type="submit" class="btn btn-primary" value="Donate" />
+        </div>
+    </div>
+    
+
+</div>

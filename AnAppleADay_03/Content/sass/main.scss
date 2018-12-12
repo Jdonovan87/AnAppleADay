@@ -1,0 +1,177 @@
+﻿@import "abstracts/_variables.scss";
+@import "abstracts/_mixins.scss";
+
+@import "base/_animations.scss";
+@import "base/_base.scss";
+@import "base/_typography.scss";
+@import "base/_utilities.scss";
+
+@import "components/_button.scss";
+@import "components/_compostition.scss";
+@import "components/_feature-box.scss";
+
+@import "layout/_grid.scss";
+@import "layout/_header.scss";
+@import "layout/_navbar.scss";
+
+@import "pages/_home.scss";
+
+
+
+
+
+/*.navbar {
+    height: 4rem;
+    background-color: $color-primary-grey;
+    border-bottom: $color-primary-grey 3px solid;
+    opacity: 0.8;
+}
+
+#home-section {
+    background-image: url('../images/apple-red_01.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 700px;
+}
+
+#header-custom {
+    background-image: url('../images/aprons.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 700px;
+}
+
+.dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .4);
+}
+
+.home-inner {
+    padding-top: 150px;
+}
+
+#home-section .fas {
+    color: $color-primary-coral;
+    background: $color-primary-grey;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#explore-section .fas,
+#share-section .fas,
+#create-section .fas {
+    color: $color-primary-grey;
+    background: $color-primary-coral;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#explore-head-section {
+    background-color: $color-primary-coral;
+}
+
+#explore-head-section-page {
+    background-color: $color-primary-grey;
+}
+
+#explore-section {
+    background-color: $color-primary-forest;
+}
+
+.wrapper {
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 20px;
+
+    &-register {
+        margin: 50px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-gap: 20px;
+    }
+}
+
+
+
+.box {
+    background-color: $color-primary-coral;
+    padding: 10px;
+    border: 5px solid $color-primary-seafoam;
+    border-radius: 15px;
+}
+
+.box-register {
+    background-color: $color-primary-grey;
+    padding: 10px;
+    border: 5px solid $color-primary-seafoam;
+    border-radius: 15px;
+}
+
+.box-create {
+    background-color: $color-primary-coral;
+    padding: 10px;
+    border: 5px solid $color-primary-teal;
+}
+
+.container-wishlists {
+    margin-top: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#create-head-section {
+    background-color: $color-primary-coral;
+}
+
+#create-head-section-page {
+    background-color: $color-primary-grey;
+}
+
+#create-section {
+    background-color: $color-primary-forest;
+}
+
+#registration-page {
+    background-image: url('../images/pencils-horizontal.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 700px;
+}
+
+#share-head-section {
+    background-color: $color-primary-coral;
+}
+
+#share-section {
+    background-color: $color-primary-forest;
+}
+
+.wrapper-wishlist-details {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 20px;
+}
+
+.heading-list-details {
+    margin-top: 100px;
+}
+
+.wrapper-pictures{
+    display: grid;
+
+    &__#1 {
+        grid-column: 1 / 1;
+    }
+}*/

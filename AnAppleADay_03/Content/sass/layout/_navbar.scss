@@ -1,0 +1,29 @@
+﻿@import "../abstracts/_variables.scss";
+
+.nav-bar-1 {
+    background-color: $color-primary-grey;
+    height: 5rem;
+
+    ul {
+        text-align: center;
+        list-style-type: none;
+        margin: 0;
+        padding: 15px;
+
+        li {
+            display: inline;
+            font-family: "Lato", sans-serif;
+            font-size: 17px;
+
+            a {
+                color: #f2f2f2;
+                text-decoration: none;
+                padding: 14px;
+
+                &:hover {
+                    background-color: #111;
+                }
+            }
+        }
+    }
+}

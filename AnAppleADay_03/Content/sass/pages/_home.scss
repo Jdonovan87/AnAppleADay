@@ -1,0 +1,25 @@
+﻿@import "../abstracts/_variables.scss";
+
+.section-about {
+    background-color: $color-grey-light-1;
+    padding: 25rem 0;
+    margin-top: -20vh;
+}
+
+.section-features {
+    padding: 20rem 0;
+    background-image: linear-gradient( to right bottom, rgba($color-primary-forest, 0.6), 
+    rgba($color-primary-grey, 0.8) ), 
+        url(/Images/Teacher-AtDesk.jpg);
+    background-size: cover;
+}
+
+.section-tours {
+    background-color: $color-grey-light-1;
+    padding: 25rem 0;
+}
+
+.section-registration{
+    background-color: $color-primary-teal;
+    align-content:center;
+}

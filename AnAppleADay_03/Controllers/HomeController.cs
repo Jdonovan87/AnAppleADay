@@ -13,17 +13,20 @@ namespace AnAppleADay_03.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Explore()
         {
-            ViewBag.Message = "Your application description page.";
 
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Create()
         {
-            ViewBag.Message = "Your contact page.";
 
+            return View();
+        }
+
+        public ActionResult Share()
+        {
             return View();
         }
     }

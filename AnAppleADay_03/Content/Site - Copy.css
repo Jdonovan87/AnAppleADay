@@ -1,0 +1,159 @@
+﻿/*
+    #FF8E52 - coral
+    #4F7F7B - grey green
+    #057F74 - dark green
+    #7ECCC4 - teal
+    #9EFFF6 - seafoam
+    #BCFFF8 - light green
+
+*/
+
+
+body {
+    background: #4F7F7B;
+    color: #fff;
+}
+
+.navbar {
+    background-color: #FF8E52;
+    border-bottom: #4F7F7B 3px solid;
+    opacity: 0.8;
+}
+
+#home-section {
+    background-image: url('../images/apple-red_01.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 700px;
+}
+
+#header {
+    background-image: url('../images/aprons.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 700px;
+}
+
+.dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, .4);
+}
+
+.home-inner {
+    padding-top: 150px;
+}
+
+#home-section .fas {
+    color: #FF8E52;
+    background: #4F7F7B;
+    padding: 5px;
+    border-radius: 5px;
+}
+#explore-section .fas,
+#share-section .fas,
+#create-section .fas {
+    color: #4F7F7B;
+    background: #FF8E52;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#explore-head-section {
+    margin-top: 14px;
+    background-color: #FF8E52;
+}
+
+#explore-head-section-page {
+    background-color: #4F7F7B;
+}
+
+#explore-section {
+    background-color: #057F74;
+}
+
+.wrapper {
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 20px;
+}
+
+.wrapper-register {
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 20px;
+}
+
+.box {
+    background-color: #FF8E52;
+    padding: 10px;
+    border: 5px solid #9EFFF6;
+    border-radius: 15px;
+}
+
+.box-register {
+    background-color: #4F7F7B;
+    padding: 10px;
+    border: 5px solid #9EFFF6;
+    border-radius: 15px;
+}
+
+.box-create {
+    background-color: #FF8E52;
+    padding: 10px;
+    border: 5px solid #7ECCC4;
+}
+
+.container-wishlists {
+    margin-top: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#create-head-section {
+    background-color: #FF8E52;
+}
+
+#create-head-section-page {
+    background-color: #4F7F7B;
+}
+
+#create-section {
+    background-color: #057F74;
+}
+
+#registration-page {
+    background-image: url('../images/pencils-horizontal.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 700px;
+}
+
+#share-head-section {
+    background-color: #FF8E52;
+}
+
+#share-section {
+    background-color: #057F74;
+}
+
+.wrapper-wishlist-details {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 20px;
+}
+
+.heading-list-details {
+    margin-top: 100px;
+}

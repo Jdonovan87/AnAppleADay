@@ -1,0 +1,99 @@
+﻿@import "../abstracts/_variables.scss";
+
+.header {
+    height: 95vh;
+    background-image: linear-gradient( to right bottom, rgba($color-primary-coral, 0.8), rgba($color-primary-forest, 0.8) ), url(../../../Images/Lockers.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    /*background-position: top;*/
+    /*position: relative;*/
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+    &__logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+
+    &__logo {
+        height: 3.5rem;
+    }
+
+    &__text-box {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}
+
+.home-content-section {
+    background-image: url('../../../Images/Apple-Red_01.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 600px;
+    color: $color-white;
+
+    &__dark-overlay {
+        position:fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, .4);
+    }
+}
+
+.head-section {
+    background-color: $color-primary-coral;
+    color: $color-white;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+
+    h1 {
+        font-size:4rem;
+        font-weight:400;
+    }
+
+    p {
+        font-size:3rem;
+        font-weight: 300;
+    }
+}
+
+.head-section-explore {
+    background-color: $color-primary-coral;
+    color: $color-white;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+
+    h1 {
+        font-size: 4rem;
+        font-weight: 400;
+    }
+
+    p {
+        font-size: 3rem;
+        font-weight: 300;
+    }
+}
+
+.content-section {
+    background-color: $color-primary-forest;
+    color: $color-white;
+    padding: 4rem;
+
+    h1 {
+        font-size: 4rem;
+        font-weight: 400;
+    }
+
+    p {
+        font-size: 3rem;
+        font-weight: 300;
+    }
+}
+
+

@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using AnAppleADay_03.Models;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace AnAppleADay_03.Controllers
 {
@@ -17,6 +18,7 @@ namespace AnAppleADay_03.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
+        private ApplicationDbContext context = new ApplicationDbContext();
 
         public AccountController()
         {
@@ -153,10 +155,40 @@ namespace AnAppleADay_03.Controllers
             {
                 var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
                 var result = await UserManager.CreateAsync(user, model.Password);
+                EmailUtility.sendMail(model.Email, "Welcome to An Apple A Day. Thank you " +model.firstName +"for Registering. This is a place where teachers can get hello from the community. We are happy that have joined us.");
+
+                //User Role code
+                var roleStore = new RoleStore<IdentityRole>(context);
+                var roleManager = new RoleManager<IdentityRole>(roleStore);
+                var userStore = new UserStore<ApplicationUser>(context);
+                var userManager = new UserManager<ApplicationUser>(userStore);
+                
+                ////user role code --end
+
+
                 if (result.Succeeded)
                 {
+                    var teacher = new Teacher
+                    {
+                        firstName = model.firstName,
+                        lastName = model.lastName,
+                        gender = model.gender.ToString(),
+                        state = model.state,
+                        city = model.city,
+                        dob = model.dob,
+                        zip = model.zip,
+                        teachId = user.Id
+                    };
+
+                    using (var db = new AnAppleADay_01Entities())
+                    {
+                        db.Teachers.Add(teacher);
+                        db.SaveChanges();
+                    } 
+
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
-                    
+
+                    userManager.AddToRole(user.Id, "User");
                     // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
                     // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);

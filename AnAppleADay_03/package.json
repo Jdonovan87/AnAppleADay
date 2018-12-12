@@ -1,0 +1,14 @@
+{
+  "name": "anappleaday",
+  "version": "1.0.0",
+  "description": "an app for teachers",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass content/sass/main.scss content/site.css --watch"
+  },
+  "author": "Jonny",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.10.0"
+  }
+}

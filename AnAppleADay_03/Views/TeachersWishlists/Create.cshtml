@@ -1,0 +1,102 @@
+﻿@model AnAppleADay_03.TeachersWishlist
+
+@{
+    ViewBag.Title = "Create";
+}
+
+
+    <section class="head-section">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center py-5">
+                    <h1 class="display-4 mt-3">Create</h1>
+                    <p class="lead">
+                        Its easy to create a profile. A few simple steps and your ready to become a member
+                        of a community focused on student well being.
+                    </p>
+                    <p>@Html.ActionLink("Find Out More", "Create", "Home", new { @class = "btn-new btn-new--white btn-new--white--animated" })</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <h4>Teachers Wishlist</h4>
+            <hr/>
+            @Html.ValidationSummary(true, "", new {@class = "text-danger"})
+            <div class="wrapper container">
+            <div class="box form-group">
+                @Html.LabelFor(model => model.teachId, "teachId", htmlAttributes: new {@class = "control-label"})
+                <div class="col-md-10">
+                    @Html.DropDownList("teachId", null, htmlAttributes: new {@class = "form-control"})
+                    @Html.ValidationMessageFor(model => model.teachId, "", new {@class = "text-danger"})
+                </div>
+            </div>
+
+            <div class="box form-group">
+                @Html.LabelFor(model => model.itemName, htmlAttributes: new {@class = "control-label col-md-2"})
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.itemName, new {htmlAttributes = new {@class = "form-control"}})
+                    @Html.ValidationMessageFor(model => model.itemName, "", new {@class = "text-danger"})
+                </div>
+            </div>
+
+            <div class="box form-group">
+                @Html.LabelFor(model => model.itemAbout, htmlAttributes: new {@class = "control-label col-md-2"})
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.itemAbout, new {htmlAttributes = new {@class = "form-control"}})
+                    @Html.ValidationMessageFor(model => model.itemAbout, "", new {@class = "text-danger"})
+                </div>
+            </div>
+
+            <div class="box form-group">
+                @Html.LabelFor(model => model.cost, htmlAttributes: new {@class = "control-label col-md-2"})
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.cost, new {htmlAttributes = new {@class = "form-control"}})
+                    @Html.ValidationMessageFor(model => model.cost, "", new {@class = "text-danger"})
+                </div>
+            </div>
+
+            <div class="box form-group">
+                @Html.LabelFor(model => model.current, htmlAttributes: new {@class = "control-label col-md-2"})
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.current, new {htmlAttributes = new {@class = "form-control"}})
+                    @Html.ValidationMessageFor(model => model.current, "", new {@class = "text-danger"})
+                </div>
+            </div>
+
+                <div class="box form-group">
+                    @Html.LabelFor(model => model.expDate, htmlAttributes: new {@class = "control-label col-md-2"})
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.expDate, new {htmlAttributes = new {@class = "form-control"}})
+                        @Html.ValidationMessageFor(model => model.expDate, "", new {@class = "text-danger"})
+                    </div>
+                </div>
+            
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Create" class="btn btn-default"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    }
+
+
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

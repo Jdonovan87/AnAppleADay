@@ -1,31 +1,211 @@
-﻿@{
+﻿@using AnAppleADay_03.Models
+@model LoginViewModel
+
+@{
+
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+<!-- New Header -->
+
+<header class="header">
+    @*<div class="header__logo-box">
+            <img src="Images\logo-white.png" alt="Logo" class="header__logo" />
+        </div>*@
+
+    <div class="header__text-box">
+        <h1 class="heading-primary">
+            <span class="heading-primary--main">An Apple A Day</span>
+            <span class="heading-primary--sub">Helping teachers one classroom at a time.</span>
+        </h1>
+        <p>@Html.ActionLink("Discover our teachers", "Explore", "Teacherswishlists", null, new { @class = "btn-new btn-new--white btn-new--white--animated"})</p>
+    </div>
+</header>
+
+<!-- End New Header -->
+<!--   HOME SECTION  -->
+
+    <div class="home-content-section">
+        <section class="row">
+            <div class="col-1-of-2 margin-top-1">
+                <h1 class="display-4 mt-5">
+                    <strong>An Apple A Day</strong> seeks to connect underfunded teachers with
+                    people who are willing to help.
+                </h1>
+            </div>
+            <div class="col-1-of-2 margin-top-1">
+                <div class="d-flex">
+                    <div class="p-4 align-self-start">
+                        <i class="fas fa-check fa-2x"></i>
+                    </div>
+                    <div class="col-3-of-4 align-self-start">
+                        As a Teacher join our community by creating a personal profile of your class.
+                        Create a wish list expressing the materials you require for various projects.
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="p-4 align-self-start">
+                        <i class="fas fa-check fa-2x"></i>
+                    </div>
+                    <div class="p-4 self-align-end">
+                        As a Donar be apart of a community whose focus is to supply our teachers with the materials
+                        they need to help our children grow to be the best version of themselves.
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="p-4 align-self-start">
+                        <i class="fas fa-check fa-2x"></i>
+                    </div>
+                    <div class="p-4 self-align-end">
+                        By connecting those in need with those willing to help we create a community of support.
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div> 
+
+
+<!--  EXPLORE HEAD  -->
+<div class="head-section">
+    <div class="container">
+        <div class="row">
+            <div class="col text-center py-5">
+                <h1>Explore</h1>
+                <p>
+                    There are many teachers, possibly in your own community that need our help.
+                    Come explore the various profiles of our teachers. Each with unique class rooms and unique challenges.
+                    Simply pick a profile and choose from a list of much needed materials. Its so easy!
+                </p>
+                <p>@Html.ActionLink("Find Out More", "Explore", "Teacherswishlists", null, new { @class = "btn-new btn-new--white btn-new--white--animated" })</p>
+            </div>
+        </div>
+    </div>
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
+<!--  EXPLORE SECTION  -->
+<div>
+    <section class="content-section">
+        <div class="row">
+                <div class="col-1-of-2">
+                    <img class="img-fluid mb-3 rounded-circle" src="~/Images/Student-Girl_02.jpg" />
+                </div>
+                <div class="col-1-of-2">
+                    <h1>Explore & Connect</h1>
+                    <p>Take a look at some of the amazing classrooms in your community and the incredible work they do.</p>
+                    <div class="d-flex">
+                        <div class="p-4 allign-self-start">
+                            <i class="fas fa-check fa-2x"></i>
+                        </div>
+                        <div class="p-4 allign-self-end">
+                            Read about the challenges that our teachers face everyday and find out how you can help.
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <div class="p-4 allign-self-start">
+                            <i class="fas fa-check fa-2x"></i>
+                        </div>
+                        <div class="p-4 allign-self-end">
+                            Look at the happy faces of students benefiting from other donars contributions.
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
+    </section>
 </div>
+
+<!--  Create HEAD  -->
+<section class="head-section">
+    <div class="container">
+        <div class="row">
+            <div class="col text-center py-5">
+                <h1 class="display-4">Create</h1>
+                <p class="lead">
+                    Its easy to create a profile. A few simple steps and your ready to become a member
+                    of a community focused on student well being.
+                </p>
+                <p>@Html.ActionLink("Find Out More", "Create", "TeachersWishlists", null, new { @class = "btn-new btn-new--white btn-new--white--animated" })</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--  Create SECTION  -->
+<section class="content-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-1-of-2 order-2">
+                <img class="img-fluid mb-3 rounded-circle" src="~/Images/Teacher-AtBoard.jpg" />
+            </div>
+            <div class="col-1-of-2 order-1">
+                <h1>Create your Profile</h1>
+                <p>There are two types of profiles, teachers and donars. </p>
+                <div class="d-flex">
+                    <div class="p-4 allign-self-start">
+                        <i class="fas fa-check fa-2x"></i>
+                    </div>
+                    <div class="p-4 allign-self-end">
+                        If your a teacher you can make a profile that shows others the amazing classroom
+                        you've built. make sure to include your wishlist so Donars know exactly what your needs are.
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="p-4 allign-self-start">
+                        <i class="fas fa-check fa-2x"></i>
+                    </div>
+                    <div class="p-4 allign-self-end">
+                        As a Donar you can create a profile and show everyone all the gifts you gave to those
+                        who need it most, our teachers and their students.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--  SHARE HEAD  -->
+<section class="head-section">
+    <div class="container">
+        <div class="row">
+            <div class="col text-center py-5">
+                <h1 class="display-4">Share</h1>
+                <p class="lead">Here at An Apple A Day we believe we should be proud of our contributions. So make sure to tell everyone how great you are!</p>
+                <p>@Html.ActionLink("Find Out More", "Share", "Home", null, new { @class = "btn-new btn-new--white btn-new--white--animated" })</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--  SHARE SECTION  -->
+<section class="content-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-1-of-2">
+                <img class="img-fluid mb-3 rounded-circle" src="~/Images/Student-Boy_01.jpg" />
+            </div>
+            <div class="col-1-of-2">
+                <h1>Share your contributions</h1>
+                <p>
+                    Share with others your experience with us. Whether it be the donations you gave or the donations you recieve.
+                    You can brag all you want, or simply write a thank you card to someone.
+                </p>
+                <div class="d-flex">
+                    <div class="p-4 allign-self-start">
+                        <i class="fas fa-check fa-2x"></i>
+                    </div>
+                    <div class="p-4 allign-self-end">
+                        See all the amazing donations others in your community have given.
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="p-4 allign-self-start">
+                        <i class="fas fa-check fa-2x"></i>
+                    </div>
+                    <div class="p-4 allign-self-end">
+                        Write a beautiful thank you note to one of your donars letting them know how important they are to your class.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

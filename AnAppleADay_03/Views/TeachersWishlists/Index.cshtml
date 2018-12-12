@@ -1,0 +1,69 @@
+﻿@model IEnumerable<AnAppleADay_03.TeachersWishlist>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="container">
+    <div class="container-wishlists">
+
+        <table class="mt-5">
+            <tr>
+                <th class="box-create">
+                    @Html.DisplayNameFor(model => model.itemName)
+                </th>
+                <th class="box-create">
+                    @Html.DisplayNameFor(model => model.itemAbout)
+                </th>
+                <th class="box-create">
+                    @Html.DisplayNameFor(model => model.cost)
+                </th>
+                <th class="box-create">
+                    @Html.DisplayNameFor(model => model.current)
+                </th>
+                <th class="box-create">
+                    @Html.DisplayNameFor(model => model.expDate)
+                </th>
+                <th class="box-create">
+                    @Html.DisplayNameFor(model => model.Teacher.firstName)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr class="feature-box mt-2">
+                    <td class="box-create">
+                        @Html.DisplayFor(modelItem => item.itemName)
+                    </td>
+                    <td class="box-create">
+                        @Html.DisplayFor(modelItem => item.itemAbout)
+                    </td>
+                    <td class="box-create">
+                        @Html.DisplayFor(modelItem => item.cost)
+                    </td>
+                    <td class="box-create">
+                        @Html.DisplayFor(modelItem => item.current)
+                    </td>
+                    <td class="box-create">
+                        @Html.DisplayFor(modelItem => item.expDate)
+                    </td>
+                    <td class="box-create">
+                        @Html.DisplayFor(modelItem => item.Teacher.firstName)
+                    </td>
+                    <td class="box-create">
+                        @Html.ActionLink("Edit", "Edit", new { id = item.listId })
+                        @Html.ActionLink("Details", "Details", new { id = item.listId })
+                        @Html.ActionLink("Delete", "Delete", new { id = item.listId })
+                    </td>
+                </tr>
+            }
+        </table>
+        <h4>
+            <a class="btn-new btn-new--white btn-new--white--animated">
+                @Html.ActionLink("Create New", "Create")
+            </a>
+        </h4>
+    </div>
+
+</div>
